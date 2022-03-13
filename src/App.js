@@ -14,8 +14,8 @@ const App = () => {
             const data = await response.json();
             console.log(data.slip.advice);
             setAdvice(data.slip.advice);
-        } catch(err) {
-            console.log('Could not get advice: '+ err);
+        } catch (err) {
+            console.log('Could not get advice: ' + err);
         }
     }
 
@@ -27,8 +27,8 @@ const App = () => {
     return (
         <div className='app'>
             <div className='advice-card'>
-                <h1 className="advice">{ advice }</h1>
-                <button className="button" onClick={ fetchAdvice }>
+                <h1 className="advice">{advice}</h1>
+                <button className="button" onClick={fetchAdvice}>
                     <span>Give me some advice!</span>
                 </button>
             </div>
